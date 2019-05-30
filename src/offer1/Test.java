@@ -1,3 +1,5 @@
+package offer1;
+
 /**
  * @author lhx
  * @date 2019/5/30 - 21:16
@@ -11,7 +13,7 @@
  * 自增、自减操作都是直接修改变量的值，不经过操作数栈
  * 最后的赋值之前，临时结果也是存储在操作数栈中
  */
-public class offer1 {
+public class Test {
 
     public static void main(String args[]){
         int i = 1;
