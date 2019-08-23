@@ -2,9 +2,7 @@ package testjava;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author lhx
@@ -37,6 +35,62 @@ import java.util.Map;
  * 当数组的某一个索引位置上的元素以链表形式存在的数据个数大于8且当前数组的长度超过64时，此时此索引位置上的所有数据改为使用红黑树存储。
  */
 public class MapTest {
+    
+    @Test
+    public void test4(){
+        Map map = new HashMap();
+        map.put("aa", 123);
+        map.put(123, "aa");
+        map.put(18, "bb");
+        map.put("dd", "cc");
+        //遍历所有的key集
+        Set set = map.keySet();
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        //遍历所有的value
+        Collection values = map.values();
+        for (Object value : values) {
+            System.out.println(value);
+        }
+        //遍历所有的key-value
+        Set entrySet = map.entrySet();
+        Iterator iterator1 = entrySet.iterator();
+        while (iterator1.hasNext()) {
+            Object next = iterator1.next();
+            System.out.println(next);
+            Map.Entry entry = (Map.Entry) next;
+            System.out.println(entry.getKey() + "--->" + entry.getValue());
+        }
+    }
+    
+    @Test
+    public void test3(){
+        Map map = new HashMap();
+        map.put("aa", 123);
+        map.put(123, "aa");
+        map.put(18, "bb");
+        map.put("dd", "cc");
+
+        System.out.println(map.containsKey(18));
+
+        System.out.println(map.containsValue(123));
+    }
+
+    @Test
+    public void test2(){
+        Map map = new HashMap();
+        map = new LinkedHashMap();
+        map.put(123, "aa");
+        map.put(987, "bb");
+        map.put(54, "dd");
+        map.put(97, "ff");
+        map.put(654, "cc");
+
+        System.out.println(map);
+    }
     
     @Test
     public void test1(){
