@@ -18,6 +18,7 @@ public class Persion {
     }
 
     public Persion() {
+        System.out.println("Persion");
     }
 
     public Persion(String name, int age) {
