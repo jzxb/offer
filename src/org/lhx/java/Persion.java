@@ -43,4 +43,8 @@ public class Persion extends Creature<String> implements Comparable<String>, MyI
     public void info() {
         System.out.println("人");
     }
+
+    private static void showDesc() {
+        System.out.println("hhhhhhhhhhhh");
+    }
 }
